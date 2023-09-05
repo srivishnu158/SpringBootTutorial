@@ -1,4 +1,4 @@
-package controller;
+package com.example.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Entities;
-import error.DeptNotFoundException;
+import com.example.entity.Entities;
+import com.example.error.DeptNotFoundException;
+import com.example.repository.Db;
+import com.example.service.DeptService;
+import com.example.service.ServiceRep;
+
 import jakarta.validation.Valid;
-import repository.Db;
-import service.DeptService;
-import service.ServiceRep;
 
 @RestController
 public class Controller1 {
