@@ -1,4 +1,4 @@
-package entity;
+package com.example.entity;
 
 import org.springframework.http.HttpStatus;
 

@@ -1,4 +1,4 @@
-package error;
+package com.example.error;
 
 public class DeptNotFoundException extends Exception{
 

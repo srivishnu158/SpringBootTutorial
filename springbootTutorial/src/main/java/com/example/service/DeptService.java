@@ -1,13 +1,13 @@
-package service;
+package com.example.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entity.Entities;
-import error.DeptNotFoundException;
-import repository.Db;
+import com.example.entity.Entities;
+import com.example.error.DeptNotFoundException;
+import com.example.repository.Db;
 @Service
 public class DeptService implements ServiceRep{
 	@Autowired

@@ -1,4 +1,4 @@
-package error;
+package com.example.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import entity.ErrorMessage;
+import com.example.entity.ErrorMessage;
 
 @ControllerAdvice
 @ResponseStatus
