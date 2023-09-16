@@ -23,6 +23,11 @@ public class DeptService implements ServiceRep{
 		}
 		return DeptRep.findById(id).get();
 	}
+	
+	public Entities getById(int id) {
+		return DeptRep.findById(id).get();
+	}
+	
 	public String delete(int id) {
 		DeptRep.deleteById(id);
 		return "deleted";
