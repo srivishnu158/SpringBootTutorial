@@ -25,7 +25,7 @@ class DbTest {
 	@BeforeEach
 	void setup() {
 		Entities DeptEntity = Entities.builder()
-				.sid(1)
+//				.sid(1)
 				.sname("Santhanam")
 				.dept("drugs").build();
 		entityManagerT.persist(DeptEntity);

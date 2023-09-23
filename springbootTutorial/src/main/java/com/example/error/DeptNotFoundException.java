@@ -17,7 +17,6 @@ public class DeptNotFoundException extends Exception{
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
-
 	public DeptNotFoundException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub

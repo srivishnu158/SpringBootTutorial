@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
@@ -58,21 +59,22 @@ class Controller1Test {
 
 	@Test
 	void testSaveDetails() throws Exception {
+//		String json = ""
 		Entities input_dept = Entities.builder()
 				.sname("ram")
 				.dept("ece").build();
 		Mockito.when(serv.saveDetails(input_dept)).thenReturn(dept);
 		Mockmvc.perform(MockMvcRequestBuilders.post("/dept")
 		.contentType(MediaType.APPLICATION_JSON)
+//		.content(toJson(json))
 		.content("{\n"+
-		   "\t\"sid\":\"1\",\n"+
 		    "\t\"sname\":\"ram\",\n"+
 		    "\t\"dept\":\"ece\"\n"+
 		"}"))
-		.andExpect(MockMvcResultMatchers.status().isOk());
+		.andExpect(MockMvcResultMatchers.status().isOk())
+		.andExpect(jsonPath("$.dept",is("ece")));
 //		fail("Not yet implemented");
 	}
-
 	@Test
 //	@Disabled
 	void testGet() throws Exception {

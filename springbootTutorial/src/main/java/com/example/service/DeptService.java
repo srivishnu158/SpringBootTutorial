@@ -19,6 +19,7 @@ public class DeptService implements ServiceRep{
 	public Entities get(int id) throws DeptNotFoundException {
 		Optional<Entities> option = DeptRep.findById(id);
 		if(!option.isPresent()) {
+//			throw new Exception("not found");
 			throw new DeptNotFoundException("Department you are trying to find doesn't exist");
 		}
 		return DeptRep.findById(id).get();
