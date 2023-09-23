@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@ComponentScan({"com.example.demo","com.example.controller","com.example.service","com.example.entity","com.example.error"})
+@ComponentScan({"com.example.demo","com.example.controller","com.example.service","com.example.entity","com.example.error","config"})
 @EnableJpaRepositories("com.example.repository")
 @EnableConfigurationProperties
 @EntityScan("com.example.entity")

@@ -14,7 +14,7 @@ import com.example.entity.ErrorMessage;
 @ResponseStatus
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler{
 	@ExceptionHandler(DeptNotFoundException.class)
-	public ResponseEntity<ErrorMessage> DeptNotFoundException(DeptNotFoundException exc,WebRequest request) {
+	public ResponseEntity<ErrorMessage> DeptNoFoundException(DeptNotFoundException exc,WebRequest request) {
 		ErrorMessage msg = new ErrorMessage(HttpStatus.NOT_FOUND,exc.getMessage());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(msg);
 	}
